@@ -4,13 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Swiper CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    </style>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Form Page</title>
   </head>
   <body class="bg-[#F4F4F4]">
-    <main class="lg:bg-[url('./assets/bg-image.png')] bg-cover">
+    <!-- hero section -->
+    <section class="lg:bg-[url('./assets/bg-image.png')] bg-cover">
       <div
         class="grid grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto gap-5 place-content-center min-h-screen p-4 lg:p-10"
       >
@@ -141,6 +189,49 @@
         <!-- File Upload Section -->
         <div class="col-span-1 bg-[#F4F4F4]">File Upload Section</div>
       </div>
-    </main>
+    </section>
+
+    <!-- swiper section -->
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./assets/slider-page-1.png" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/slider-page-2.png" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/slider-page-1.png" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/slider-page-2.png" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/slider-page-1.png" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/slider-page-2.png" alt="" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>
