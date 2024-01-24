@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom style -->
     <link rel="stylesheet" href="style.css" />
 
     <!-- Swiper CDN -->
@@ -29,9 +33,6 @@
         padding: 0;
       }
     </style>
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Form Page</title>
   </head>
@@ -173,48 +174,112 @@
     <!-- swiper section -->
 
     <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="./assets/slider-page-1.png" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/slider-page-2.png" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/slider-page-1.png" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/slider-page-2.png" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/slider-page-1.png" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/slider-page-2.png" alt="" />
-        </div>
-      </div>
+      <div class="swiper-wrapper"></div>
       <div class="swiper-pagination"></div>
     </div>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        direction: "horizontal",
-        slidesPerView: 1,
-        spaceBetween: 30,
-        // mousewheel: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
+    <!-- <script>
+      // Function to initialize Swiper
+      function initSwiper() {
+        var swiper = new Swiper(".mySwiper", {
+          direction: "horizontal",
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        });
+      }
 
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
+      // Function to dynamically create Swiper slides
+      function createSwiperSlides(numberOfSlides) {
+        const swiperWrapper = document.querySelector(".swiper-wrapper");
+
+        for (let i = 0; i < numberOfSlides; i++) {
+          const swiperSlide = document.createElement("div");
+          swiperSlide.classList.add("swiper-slide");
+
+          const imgElement = document.createElement("img");
+          imgElement.src = `./assets/slider-page-${(i % 2) + 1}.png`;
+          imgElement.alt = "";
+
+          swiperSlide.appendChild(imgElement);
+          swiperWrapper.appendChild(swiperSlide);
+        }
+      }
+
+      // Wait for the DOM to be fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Specify the number of slides you want
+        const numberOfSlides = 6; // Adjust as needed
+
+        // Create Swiper slides
+        createSwiperSlides(numberOfSlides);
+
+        // Initialize Swiper
+        initSwiper();
+      });
+    </script> -->
+
+    <script>
+      // Function to initialize Swiper
+      function initSwiper() {
+        var swiper = new Swiper(".mySwiper", {
+          direction: "horizontal",
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        });
+      }
+
+      // Function to dynamically create Swiper slides from JSON data
+      function createSwiperSlides(jsonData) {
+        const swiperWrapper = document.querySelector(".swiper-wrapper");
+
+        jsonData.slides.forEach((slideData, index) => {
+          const swiperSlide = document.createElement("div");
+          swiperSlide.classList.add("swiper-slide");
+
+          const imgElement = document.createElement("img");
+          imgElement.src = slideData.url;
+          imgElement.alt = `Slide ${index + 1}`;
+
+          // Set the loading attribute to lazy
+          imgElement.loading = "lazy";
+
+          swiperSlide.appendChild(imgElement);
+          swiperWrapper.appendChild(swiperSlide);
+        });
+      }
+
+      // Wait for the DOM to be fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Fetch JSON data from the file
+        fetch("slider-data.json")
+          .then((response) => response.json())
+          .then((data) => {
+            // Create Swiper slides using fetched JSON data
+            createSwiperSlides(data);
+
+            // Initialize Swiper
+            initSwiper();
+          })
+          .catch((error) => console.error("Error fetching JSON:", error));
       });
     </script>
   </body>
