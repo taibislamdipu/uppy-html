@@ -53,7 +53,7 @@
           <div class="flex max-w-sm flex-col items-end gap-3">
             <div>
               <img
-                class="tb h-16 object-contain 2xl:h-20"
+                class="class h-16 object-contain 2xl:h-20"
                 src="./assets/logo/bzm-logo.png"
                 alt="BZM Logo"
               />
@@ -70,28 +70,33 @@
             class="w-full rounded border border-[#92C46A] bg-white p-5 shadow-lg"
           >
             <div class="space-y-4">
-              <div class="grid-cols-2 gap-4 max-md:space-y-9 md:grid">
+              <div class="grid-cols-2 gap-4 max-md:space-y-4 md:grid">
                 <div class="space-y-1">
-                  <label class="font-medium" for="fullName"
-                    >Full Name<sup style="color: #ca8b04">*</sup></label
+                  <label class="flex items-center gap-1 font-medium" for="name"
+                    >Full Name
+                    <span class="text-2xl text-[#ff0000]">*</span></label
                   >
                   <input
                     class="block w-full rounded-md border border-[#ff0000] px-3 py-2.5 transition focus:outline-none focus:ring-1"
                     type="text"
-                    name="fullName"
+                    name="name"
                     placeholder="John Smith"
                     value=""
                     required
                   />
-                  <span style="color: #ff0000; font-style: italic"
+                  <span class="italic text-[#ff0000]"
                     >Please complete this required field.</span
                   >
                 </div>
 
                 <div class="space-y-1">
-                  <label class="font-medium" for="email"
-                    >Email<sup style="color: #ca8b04">*</sup></label
+                  <label
+                    class="flex items-center gap-1 font-medium"
+                    for="email"
                   >
+                    Email
+                    <span class="text-2xl text-[#ff0000]">*</span>
+                  </label>
                   <input
                     class="block w-full rounded-md border px-3 py-2.5 transition focus:outline-none focus:ring-1 focus:ring-[#92C46A]"
                     type="email"
@@ -129,8 +134,11 @@
               </div>
 
               <div class="space-y-1">
-                <label class="font-medium" for="instruction"
-                  >Instruction<sup style="color: #ca8b04">*</sup></label
+                <label
+                  class="flex items-center gap-1 font-medium"
+                  for="instruction"
+                  >Instruction
+                  <span class="text-2xl text-[#ff0000]">*</span></label
                 >
                 <textarea
                   class="block min-h-[120px] w-full rounded-md border px-3 py-2.5 transition focus:outline-none focus:ring-1 focus:ring-[#92C46A] lg:min-h-[140px]"
@@ -207,7 +215,7 @@
             >
               <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
                 <img
-                  class="tb h-12 object-contain lg:h-16 2xl:h-20"
+                  class="class h-12 object-contain lg:h-16 2xl:h-20"
                   src="/assets/logo/bzm-logo.png"
                 />
               </div>
