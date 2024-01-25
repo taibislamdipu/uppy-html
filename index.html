@@ -9,6 +9,14 @@
       type="image/x-icon"
     />
 
+    <!-- Google Raleway Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -23,18 +31,18 @@
 
     <title>Form Page</title>
   </head>
-  <body class="bg-[#F4F4F4]">
+  <body>
     <!-- hero section -->
-    <section class="lg:bg-[url('./assets/bg-image.png')] bg-cover">
+    <section class="lg:bg-[url('./assets/bg-image.png')] bg-cover bg-[#F4F4F4]">
       <div
-        class="grid grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto gap-5 place-content-center min-h-screen p-4 lg:p-10"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-5 place-content-center max-h-[1080px] lg:h-screen p-4 max-w-screen-2xl mx-auto lg:p-10"
       >
         <!-- Form Head -->
         <div
           class="col-span-1 lg:col-span-2 flex lg:items-center justify-between"
         >
           <div class="space-y-3">
-            <h1 class="text-4xl 2xl:text-5xl text-[#92C46A] leading-tight">
+            <h1 class="text-4xl 2xl:text-5xl txt-brand leading-tight">
               Take Free Trail
             </h1>
             <p class="max-w-lg text-gray-700">
@@ -46,7 +54,7 @@
             <div>
               <img
                 class="h-16 2xl:h-20 object-contain"
-                src="./assets/bzm-logo.png"
+                src="./assets/logo/bzm-logo.png"
                 alt="BZM Logo"
               />
             </div>
@@ -68,7 +76,7 @@
                     >Full Name<sup style="color: #ca8b04">*</sup></label
                   >
                   <input
-                    class="block w-full rounded-md px-3 py-2.5 border focus:outline-none focus:ring-1 focus:ring-[#92C46A] transition"
+                    class="block w-full rounded-md px-3 py-2.5 border focus:outline-none focus:ring-1 border-[#ff0000] transition"
                     type="text"
                     name="fullName"
                     placeholder="John Smith"
@@ -158,116 +166,60 @@
       </div>
     </section>
 
-    <!-- swiper section -->
+    <section
+      class="lg:bg-[url('./assets/bg-image-2.png')] bg-cover bg-[#F4F4F4]"
+    >
+      <div
+        class="lg:h-screen p-4 lg:p-10 mx-auto max-w-screen-2xl max-h-[1080px]"
+      >
+        <!-- title -->
+        <h2 class="text-center text-4xl font-medium !leading-tight lg:text-7xl">
+          <span>Background</span> <span class="text-[#92C46A]">Removal</span>
+        </h2>
 
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper"></div>
-      <div class="swiper-pagination"></div>
-    </div>
+        <div
+          class="h-[90%] justify-between space-y-5 lg:flex lg:space-y-0 relative"
+        >
+          <!-- price -->
+          <div
+            class="right-0 top-0 flex justify-center lg:absolute lg:justify-end z-20"
+          >
+            <span
+              class="bg-[#292D32] my-5 flex h-[130px] w-[130px] flex-col items-center justify-center rounded-full font-semibold text-white lg:my-0 lg:h-[160px] lg:w-[160px]"
+            >
+              <span class="text-lg txt-brand lg:text-xl">Starts from</span>
+              <span class="text-xl text-white lg:text-2xl">0.45 USD</span>
+            </span>
+          </div>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+          <!-- bottom bzm logo -->
+          <div class="absolute bottom-0 z-20">
+            <img
+              class="h-8 lg:h-16 2xl:h-20 object-contain"
+              src="/assets/logo/bzm-logo.png"
+            />
+          </div>
 
-    <!-- <script>
-      // Function to initialize Swiper
-      function initSwiper() {
-        var swiper = new Swiper(".mySwiper", {
-          direction: "horizontal",
-          slidesPerView: 1,
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-          },
-        });
-      }
+          <!-- Before After images -->
 
-      // Function to dynamically create Swiper slides
-      function createSwiperSlides(numberOfSlides) {
-        const swiperWrapper = document.querySelector(".swiper-wrapper");
-
-        for (let i = 0; i < numberOfSlides; i++) {
-          const swiperSlide = document.createElement("div");
-          swiperSlide.classList.add("swiper-slide");
-
-          const imgElement = document.createElement("img");
-          imgElement.src = `./assets/slider-page-${(i % 2) + 1}.png`;
-          imgElement.alt = "";
-
-          swiperSlide.appendChild(imgElement);
-          swiperWrapper.appendChild(swiperSlide);
-        }
-      }
-
-      // Wait for the DOM to be fully loaded
-      document.addEventListener("DOMContentLoaded", function () {
-        // Specify the number of slides you want
-        const numberOfSlides = 6; // Adjust as needed
-
-        // Create Swiper slides
-        createSwiperSlides(numberOfSlides);
-
-        // Initialize Swiper
-        initSwiper();
-      });
-    </script> -->
-
-    <script>
-      // Function to initialize Swiper
-      function initSwiper() {
-        var swiper = new Swiper(".mySwiper", {
-          direction: "horizontal",
-          slidesPerView: 1,
-          spaceBetween: 30,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-          },
-        });
-      }
-
-      // Function to dynamically create Swiper slides from JSON data
-      function createSwiperSlides(jsonData) {
-        const swiperWrapper = document.querySelector(".swiper-wrapper");
-
-        jsonData.slides.forEach((slideData, index) => {
-          const swiperSlide = document.createElement("div");
-          swiperSlide.classList.add("swiper-slide");
-
-          const imgElement = document.createElement("img");
-          imgElement.src = slideData.url;
-          imgElement.alt = `Slide ${index + 1}`;
-
-          // Set the loading attribute to lazy
-          imgElement.loading = "lazy";
-
-          swiperSlide.appendChild(imgElement);
-          swiperWrapper.appendChild(swiperSlide);
-        });
-      }
-
-      // Wait for the DOM to be fully loaded
-      document.addEventListener("DOMContentLoaded", function () {
-        // Fetch JSON data from the file
-        fetch("slider-data.json")
-          .then((response) => response.json())
-          .then((data) => {
-            // Create Swiper slides using fetched JSON data
-            createSwiperSlides(data);
-
-            // Initialize Swiper
-            initSwiper();
-          })
-          .catch((error) => console.error("Error fetching JSON:", error));
-      });
-    </script>
+          <div class="z-10 flex-1">
+            <img
+              src="./assets/before-after-1.png"
+              class="h-full w-full object-contain"
+              alt="Before After"
+              draggable="false"
+            />
+          </div>
+          <div class="z-10 flex-1">
+            <img
+              src="./assets/before-after-2.png"
+              class="h-full w-full object-contain"
+              alt="Before After"
+              draggable="false"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

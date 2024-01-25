@@ -6,15 +6,15 @@
   background-color: rgb(254 202 202);
 }
 
-html,
+/* html,
 body {
   position: relative;
   height: 100%;
-}
+} */
 
 body {
   background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 14px;
   color: #000;
   margin: 0;
@@ -41,6 +41,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.txt-brand {
+  color: #92c46a;
 }
 
 /* Media query for screens smaller than or equal to 640px (adjust as needed) */
