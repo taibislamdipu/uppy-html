@@ -42,7 +42,7 @@
           class="col-span-1 flex justify-between lg:col-span-2 lg:items-center"
         >
           <div class="space-y-3">
-            <h1 class="text-brand text-4xl leading-tight 2xl:text-5xl">
+            <h1 class="text-4xl leading-tight text-[#92c46a] 2xl:text-5xl">
               Take Free Trail
             </h1>
             <p class="max-w-lg text-gray-700">
@@ -187,7 +187,7 @@
             <span
               class="my-5 flex h-[130px] w-[130px] flex-col items-center justify-center rounded-full bg-[#292D32] font-semibold text-white lg:my-0 lg:h-[160px] lg:w-[160px]"
             >
-              <span class="text-brand text-lg lg:text-xl">Starts from</span>
+              <span class="text-lg text-[#92C46A] lg:text-xl">Starts from</span>
               <span class="text-xl text-white lg:text-2xl">0.45 USD</span>
             </span>
           </div>
@@ -222,68 +222,20 @@
       </div>
     </section>
 
-    <!-- <div class="">
-      <div
-        class="max-h-[1080px] lg:h-screen p-4 max-w-screen-2xl mx-auto bg-[#FFF7EC] px-4 lg:px-0"
-      >
-        <div
-          class="flex flex-col-reverse items-center gap-4 py-4 lg:h-screen lg:flex-row lg:gap-0 lg:py-0 lg:pt-0"
-        >
-          <div class="flex-1">
-            <div class="relative min-h-[350px] min-w-full lg:h-full">
-              <img
-                src="./assets/example-1.png"
-                class="object-contain lg:object-fill"
-              />
-            </div>
-          </div>
-
-          <div
-            class="relative z-10 flex flex-1 flex-col justify-center text-center lg:p-20 lg:text-start"
-          >
-            <div class="right-0 top-0 flex justify-center lg:absolute lg:justify-end lg:p-10 2xl:p-20">
-              <PricingComponent price={price} />
-            </div>
-
-            <div class="space-lg">
-              <h2
-                class="flex flex-col whitespace-nowrap text-4xl font-medium !leading-tight lg:text-7xl"
-              >
-                <span>Background</span>
-                <span class="text-brand">Removal</span>
-              </h2>
-
-              <div class="space-md">
-                <p>
-                  Background Removal Service with top-notch quality every time.
-                  Cutouts, knock-outs, etching, silhouettes, etc. Whatever you
-                  call it, removing the background from a product photo puts all
-                  the attention on the selling product.
-                </p>
-
-                <ul class="list-disc pl-8 text-start">
-                  <li>White, Transparent, or Custom Background Color</li>
-                  <li>JPG, PNG, PSD, TIFF format</li>
-                  <li>Best for marketplaces</li>
-                  <li>Focus the product on your eCommerce site</li>
-                  <li>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Maiores nemo ut deserunt quis optio quos.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <section
       class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
     >
       <div
         class="relative mx-auto flex max-h-[1080px] max-w-screen-2xl flex-col-reverse items-center justify-between space-y-5 p-4 lg:h-screen lg:flex-row lg:gap-20 lg:p-10"
       >
+        <!-- bottom bzm logo -->
+        <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
+          <img
+            class="h-8 object-contain lg:h-16 2xl:h-20"
+            src="/assets/logo/bzm-logo.png"
+          />
+        </div>
+
         <!-- price -->
         <div
           class="right-10 top-10 z-20 flex justify-center lg:absolute lg:justify-end"
@@ -294,14 +246,6 @@
             <span class="text-lg text-[#92c46a] lg:text-xl">Starts from</span>
             <span class="text-xl text-white lg:text-2xl">0.45 USD</span>
           </span>
-        </div>
-
-        <!-- bottom bzm logo -->
-        <div class="absolute bottom-4 left-4 z-20 lg:bottom-10">
-          <img
-            class="h-8 object-contain lg:h-16 2xl:h-20"
-            src="/assets/logo/bzm-logo.png"
-          />
         </div>
 
         <div class="flex-1">
