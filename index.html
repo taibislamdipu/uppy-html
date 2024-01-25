@@ -53,7 +53,7 @@
           <div class="flex max-w-sm flex-col items-end gap-3">
             <div>
               <img
-                class="h-16 object-contain 2xl:h-20"
+                class="tb h-16 object-contain 2xl:h-20"
                 src="./assets/logo/bzm-logo.png"
                 alt="BZM Logo"
               />
@@ -166,13 +166,172 @@
       </div>
     </section>
 
-    <section
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <section
+            class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-3.png')]"
+          >
+            <div
+              class="relative mx-auto flex max-h-[1080px] max-w-screen-2xl flex-col-reverse items-center justify-between space-y-5 p-4 lg:h-screen lg:flex-row lg:gap-20 lg:p-10"
+            >
+              <div class="flex-1">
+                <img
+                  src="./assets/hero-image-1.png"
+                  class="h-full w-full object-contain"
+                  alt="example"
+                  draggable="false"
+                />
+              </div>
+
+              <div class="flex flex-1 flex-col items-end space-y-5">
+                <h2
+                  class="whitespace-nowrap text-center text-4xl font-medium !leading-tight lg:text-start lg:text-7xl 2xl:text-8xl"
+                >
+                  <span>Service</span>
+                  <span class="text-[#92c46a]">Portfolio</span>
+                </h2>
+                <p class="text-2xl lg:text-5xl">Before & After</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <section
+            class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
+          >
+            <div
+              class="relative mx-auto flex max-h-[1080px] max-w-screen-2xl flex-col-reverse items-center justify-between space-y-5 p-4 lg:h-screen lg:flex-row lg:gap-20 lg:p-10"
+            >
+              <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
+                <img
+                  class="tb h-12 object-contain lg:h-16 2xl:h-20"
+                  src="/assets/logo/bzm-logo.png"
+                />
+              </div>
+
+              <div
+                class="right-10 top-10 z-20 flex justify-center lg:absolute lg:justify-end"
+              >
+                <span
+                  class="my-5 flex h-[130px] w-[130px] flex-col items-center justify-center rounded-full bg-[#292D32] font-semibold text-white lg:my-0 lg:h-[160px] lg:w-[160px]"
+                >
+                  <span class="text-lg text-[#92c46a] lg:text-xl"
+                    >Starts from</span
+                  >
+                  <span class="text-xl text-white lg:text-2xl">0.45 USD</span>
+                </span>
+              </div>
+
+              <div class="flex-1">
+                <img
+                  src="./assets/example-1.png"
+                  class="h-full w-full object-contain"
+                  alt="example"
+                />
+              </div>
+
+              <div class="flex-1 space-y-5">
+                <h2
+                  class="flex flex-col text-center text-4xl font-medium !leading-tight lg:text-start lg:text-7xl"
+                >
+                  <span>Background</span>
+                  <span class="text-[#92c46a]">Removal</span>
+                </h2>
+                <p class="max-w-md text-base">
+                  Background Removal Service with top-notch quality every time.
+                  Cutouts, knock-outs, etching, silhouettes, etc. Whatever you
+                  call it, removing the background from a product photo puts all
+                  the attention on the selling product.
+                </p>
+
+                <ul class="list-disc space-y-1 pl-6 text-base">
+                  <li>White, Transparent, or Custom Background Color</li>
+                  <li>JPG, PNG, PSD, TIFF format</li>
+                  <li>Best for marketplaces</li>
+                  <li>Focus the product on your eCommerce site</li>
+                  <li>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Maiores nemo ut deserunt quis optio quos.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="swiper-slide">
+          <section
+            class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
+          >
+            <div
+              class="mx-auto max-h-[1080px] max-w-screen-2xl p-4 lg:h-screen lg:p-10"
+            >
+              <!-- title -->
+              <h2
+                class="text-center text-4xl font-medium !leading-tight lg:text-7xl"
+              >
+                <span>Background</span>
+                <span class="text-[#92C46A]">Removal</span>
+              </h2>
+
+              <div
+                class="relative h-[90%] justify-between space-y-5 lg:flex lg:space-y-0"
+              >
+                <!-- price -->
+                <div
+                  class="right-0 top-0 z-20 flex justify-center lg:absolute lg:justify-end"
+                >
+                  <span
+                    class="my-5 flex h-[130px] w-[130px] flex-col items-center justify-center rounded-full bg-[#292D32] font-semibold text-white lg:my-0 lg:h-[160px] lg:w-[160px]"
+                  >
+                    <span class="text-lg text-[#92C46A] lg:text-xl"
+                      >Starts from</span
+                    >
+                    <span class="text-xl text-white lg:text-2xl">0.45 USD</span>
+                  </span>
+                </div>
+
+                <!-- bottom bzm logo -->
+                <div class="absolute bottom-0 z-20">
+                  <img
+                    class="h-12 object-contain lg:h-16 2xl:h-20"
+                    src="/assets/logo/bzm-logo.png"
+                  />
+                </div>
+
+                <!-- Before After images -->
+
+                <div class="z-10 flex-1">
+                  <img
+                    src="./assets/before-after-1.png"
+                    class="h-full w-full object-contain"
+                    alt="Before After"
+                    draggable="false"
+                  />
+                </div>
+                <div class="z-10 flex-1">
+                  <img
+                    src="./assets/before-after-2.png"
+                    class="h-full w-full object-contain"
+                    alt="Before After"
+                    draggable="false"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- <section
       class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
     >
       <div
         class="mx-auto max-h-[1080px] max-w-screen-2xl p-4 lg:h-screen lg:p-10"
       >
-        <!-- title -->
         <h2 class="text-center text-4xl font-medium !leading-tight lg:text-7xl">
           <span>Background</span> <span class="text-[#92C46A]">Removal</span>
         </h2>
@@ -180,7 +339,6 @@
         <div
           class="relative h-[90%] justify-between space-y-5 lg:flex lg:space-y-0"
         >
-          <!-- price -->
           <div
             class="right-0 top-0 z-20 flex justify-center lg:absolute lg:justify-end"
           >
@@ -192,15 +350,12 @@
             </span>
           </div>
 
-          <!-- bottom bzm logo -->
           <div class="absolute bottom-0 z-20">
             <img
               class="h-8 object-contain lg:h-16 2xl:h-20"
               src="/assets/logo/bzm-logo.png"
             />
           </div>
-
-          <!-- Before After images -->
 
           <div class="z-10 flex-1">
             <img
@@ -220,9 +375,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section
+    <!-- <section
       class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
     >
       <div
@@ -279,9 +434,9 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section
+    <!-- <section
       class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-3.png')]"
     >
       <div
@@ -305,6 +460,11 @@
           <p class="text-2xl lg:text-5xl">Before & After</p>
         </div>
       </div>
-    </section>
+    </section> -->
   </body>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="./index.js"></script>
 </html>
