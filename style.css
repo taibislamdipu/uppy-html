@@ -47,8 +47,29 @@ body {
   object-fit: contain;
 } */
 
-.txt-brand {
-  color: #92c46a;
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 1;
+  /* border: 1px solid red; */
+  padding: 30px;
+  background-color: rgba(
+    252,
+    250,
+    250,
+    0.5
+  ); /* #fcfafa with 50% transparency */
+
+  border-radius: 50%;
+  --swiper-navigation-size: 24px;
+  transition: background-color 0.3s ease;
+  --swiper-navigation-color: white !important;
+  font-weight: bold;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 1;
+  background-color: #b8b8b8;
 }
 
 /* Media query for screens smaller than or equal to 640px (adjust as needed) */
