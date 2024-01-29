@@ -45,7 +45,7 @@
             <h1 class="text-4xl leading-none text-[#92c46a]">
               Take Free Trail
             </h1>
-            <p class="text-gray-700 max-w-lg">
+            <p class="max-w-lg text-gray-700">
               Choosing a professional photo editing company can ensure quality,
               quick turnarounds, and exceptional results.
             </p>
@@ -67,7 +67,7 @@
         <!-- User Info -->
         <div class="col-span-1">
           <form
-            class="bg-white w-full rounded border border-[#92C46A] p-5 shadow-lg"
+            class="w-full rounded border border-[#92C46A] bg-white p-5 shadow-lg"
           >
             <div class="space-y-4">
               <div class="grid-cols-2 gap-4 max-md:space-y-4 md:grid">
@@ -160,7 +160,7 @@
             <div class="mb-4 mt-8">
               <button
                 type="submit"
-                class="text-white w-full rounded bg-[#979EAB] px-4 py-3 font-medium transition-all hover:opacity-80"
+                class="w-full rounded bg-[#979EAB] px-4 py-3 font-medium text-white transition-all hover:opacity-80"
                 disabled=""
               >
                 Submit
@@ -178,35 +178,41 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <main
+          <div
             class="bg-[#F4F4F4] bg-cover px-4 lg:bg-[url('./assets/bg-image-3.png')] lg:px-0"
           >
-            <div
-              class="mx-auto max-h-[1080px] max-w-screen-2xl grid-cols-2 place-items-center gap-5 lg:grid lg:h-screen"
-            >
-              <div class="col-span-1">
-                <img
-                  src="./assets/hero-image-1.png"
-                  class="h-full w-full object-contain lg:h-[650px]"
-                  alt="example"
-                  draggable="false"
-                />
-              </div>
-              <div class="col-span-1 flex flex-col items-end space-y-5">
-                <h2
-                  class="whitespace-nowrap text-center text-4xl font-medium !leading-tight lg:text-start lg:text-7xl 2xl:text-8xl"
+            <div class="mx-auto max-w-[3000px]">
+              <div
+                class="flex flex-col-reverse gap-4 py-4 lg:h-screen lg:flex-row lg:gap-0 lg:py-0 lg:pt-20"
+              >
+                <div class="flex-1 px-10 lg:pt-10">
+                  <div class="relative min-h-[350px] min-w-full lg:h-full">
+                    <img
+                      class="h-full w-full object-contain"
+                      src="./assets/hero-image-1.png"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="z-10 flex flex-1 flex-col justify-center text-center lg:p-20 lg:text-right"
                 >
-                  <span>Service</span>
-                  <span class="text-[#92c46a]">Portfolio</span>
-                </h2>
-                <p class="text-2xl lg:text-5xl">Before & After</p>
+                  <h2
+                    class="whitespace-nowrap text-4xl font-bold !leading-normal lg:text-7xl 2xl:text-8xl"
+                  >
+                    <span>Service</span>
+                    <span class="text-[#92c46a]">Portfolio</span>
+                  </h2>
+                  <p class="text-3xl font-light leading-normal lg:text-7xl">
+                    Before & After
+                  </p>
+                </div>
               </div>
             </div>
-          </main>
+          </div>
         </div>
 
         <div class="swiper-slide">
-          <main
+          <div
             class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
           >
             <div
@@ -223,12 +229,12 @@
                 class="right-10 top-10 z-20 flex justify-center lg:absolute lg:justify-end"
               >
                 <span
-                  class="text-white my-5 flex h-[130px] w-[130px] flex-col items-center justify-center rounded-full bg-[#292D32] font-semibold lg:my-0 lg:h-[160px] lg:w-[160px]"
+                  class="my-5 flex h-[130px] w-[130px] flex-col items-center justify-center rounded-full bg-[#292D32] font-semibold text-white lg:my-0 lg:h-[160px] lg:w-[160px]"
                 >
                   <span class="text-lg text-[#92c46a] lg:text-xl"
                     >Starts from</span
                   >
-                  <span class="text-white text-xl lg:text-2xl">0.45 USD</span>
+                  <span class="text-xl text-white lg:text-2xl">0.45 USD</span>
                 </span>
               </div>
 
@@ -266,45 +272,39 @@
                 </ul>
               </div>
             </div>
-          </main>
+          </div>
         </div>
 
         <div class="swiper-slide">
           <div
-            class="relative bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
+            class="relative bg-[#F4F4F4] bg-[url('./assets/bg-image-2.png')] bg-cover"
           >
-            <main
-              class="mx-auto flex max-w-screen-2xl flex-col gap-5 lg:h-screen lg:max-h-[1080px] lg:gap-0"
-            >
-              <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
-                <img
-                  class="h-12 object-contain lg:h-16 2xl:h-20"
-                  src="/assets/logo/bzm-logo.png"
-                />
-              </div>
+            <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
+              <img
+                class="h-12 object-contain lg:h-16 2xl:h-20"
+                src="/assets/logo/bzm-logo.png"
+              />
+            </div>
 
-              <div class="flex-1">
-                <h2
-                  class="pt-3 text-center text-4xl font-medium !leading-tight lg:text-6xl"
-                >
-                  <span>Background</span>
-                  <span class="text-[#92c46a]">Removal</span>
-                </h2>
-              </div>
-              <div
-                class="h-full w-full items-center justify-between space-y-5 lg:flex lg:space-y-0"
+            <main class="h-screen px-4 py-10">
+              <h2
+                class="h-1/6 text-center text-4xl font-medium leading-none lg:text-7xl"
               >
-                <div class="col-span-1 flex-1">
+                <span>Background</span>
+                <span class="text-[#92c46a]">Removal</span>
+              </h2>
+              <div class="h-4/5 justify-between space-y-5 lg:flex lg:space-y-0">
+                <div class="z-10 flex-1">
                   <img
-                    class="h-full w-full object-contain lg:p-14"
                     src="./assets/before-after-1.png"
+                    class="h-full w-full object-contain"
                     alt=""
                   />
                 </div>
-                <div class="col-span-1 flex-1">
+                <div class="z-10 flex-1">
                   <img
-                    class="h-full w-full object-contain lg:p-14"
                     src="./assets/before-after-2.png"
+                    class="h-full w-full object-contain"
                     alt=""
                   />
                 </div>
