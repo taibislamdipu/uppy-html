@@ -178,36 +178,11 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <!-- <section
-            class="h-screen bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-3.png')]"
-          >
-            <div class="grid h-full grid-cols-2 place-items-center">
-              <div class="tb col-span-1 h-full">
-                <img
-                  src="./assets/hero-image-1.png"
-                  class="h-full w-full object-contain"
-                  alt="example"
-                  draggable="false"
-                />
-              </div>
-
-              <div class="col-span-1 flex flex-col items-end space-y-5">
-                <h2
-                  class="whitespace-nowrap text-center text-4xl font-medium !leading-tight lg:text-start lg:text-7xl 2xl:text-8xl"
-                >
-                  <span>Service</span>
-                  <span class="text-[#92c46a]">Portfolio</span>
-                </h2>
-                <p class="text-2xl lg:text-5xl">Before & After</p>
-              </div>
-            </div>
-          </section> -->
-
-          <section
-            class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-3.png')]"
+          <main
+            class="bg-[#F4F4F4] bg-cover px-4 lg:bg-[url('./assets/bg-image-3.png')] lg:px-0"
           >
             <div
-              class="mx-auto grid h-screen max-h-[1080px] max-w-screen-2xl grid-cols-2 place-items-center gap-5"
+              class="mx-auto max-h-[1080px] max-w-screen-2xl grid-cols-2 place-items-center gap-5 lg:grid lg:h-screen"
             >
               <div class="col-span-1">
                 <img
@@ -227,11 +202,11 @@
                 <p class="text-2xl lg:text-5xl">Before & After</p>
               </div>
             </div>
-          </section>
+          </main>
         </div>
 
         <div class="swiper-slide">
-          <section
+          <main
             class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
           >
             <div
@@ -291,68 +266,49 @@
                 </ul>
               </div>
             </div>
-          </section>
+          </main>
         </div>
 
         <div class="swiper-slide">
-          <section
-            class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
+          <div
+            class="relative bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
           >
-            <div
-              class="mx-auto max-h-[1080px] max-w-screen-2xl p-4 lg:h-screen lg:p-10"
+            <main
+              class="mx-auto flex max-h-[1080px] max-w-screen-2xl flex-col gap-5 lg:h-screen lg:gap-0"
             >
-              <h2
-                class="text-center text-4xl font-medium !leading-tight lg:text-7xl"
-              >
-                <span>Background</span>
-                <span class="text-[#92C46A]">Removal</span>
-              </h2>
+              <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
+                <img
+                  class="h-12 object-contain lg:h-16 2xl:h-20"
+                  src="/assets/logo/bzm-logo.png"
+                />
+              </div>
 
-              <div
-                class="h-[90%] justify-between space-y-5 lg:flex lg:space-y-0"
-              >
-                <div
-                  class="right-10 top-10 z-20 flex justify-center lg:absolute lg:justify-end"
+              <div class="flex-1">
+                <h2
+                  class="pt-3 text-center text-4xl font-medium !leading-tight lg:text-6xl"
                 >
-                  <span
-                    class="text-white my-5 flex h-[130px] w-[130px] flex-col items-center justify-center rounded-full bg-[#292D32] font-semibold lg:my-0 lg:h-[160px] lg:w-[160px]"
-                  >
-                    <span class="text-lg text-[#92C46A] lg:text-xl"
-                      >Starts from</span
-                    >
-                    <span class="text-white text-xl lg:text-2xl">0.45 USD</span>
-                  </span>
-                </div>
-
-                <!-- bottom bzm logo -->
-                <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
+                  <span>Background</span>
+                  <span class="text-[#92c46a]">Removal</span>
+                </h2>
+              </div>
+              <div class="h-full w-full items-center justify-between lg:flex">
+                <div class="col-span-1 flex-1">
                   <img
-                    class="h-12 object-contain lg:h-16 2xl:h-20"
-                    src="/assets/logo/bzm-logo.png"
-                  />
-                </div>
-
-                <!-- Before After images -->
-
-                <div class="z-10 flex-1">
-                  <img
+                    class="h-full w-full object-contain p-14"
                     src="./assets/before-after-1.png"
-                    class="h-full w-full object-contain"
-                    alt="Before After"
-                    draggable="false"
+                    alt=""
                   />
                 </div>
-                <div class="z-10 flex-1">
+                <div class="col-span-1 flex-1">
                   <img
+                    class="h-full w-full object-contain p-14"
                     src="./assets/before-after-2.png"
-                    class="h-full w-full object-contain"
-                    alt="Before After"
-                    draggable="false"
+                    alt=""
                   />
                 </div>
               </div>
-            </div>
-          </section>
+            </main>
+          </div>
         </div>
       </div>
 
@@ -493,6 +449,56 @@
             <span>Service</span> <span class="text-[#92c46a]">Portfolio</span>
           </h2>
           <p class="text-2xl lg:text-5xl">Before & After</p>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section
+      class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
+    >
+      <div class=" relative grid grid-cols-2 place-items-center gap-5 p-5">
+        <div
+          class="right-10 top-10 z-20 flex justify-center lg:absolute lg:justify-end"
+        >
+          <span
+            class="text-white my-5 flex h-[130px] w-[130px] flex-col items-center justify-center rounded-full bg-[#292D32] font-semibold lg:my-0 lg:h-[160px] lg:w-[160px]"
+          >
+            <span class="text-lg text-[#92C46A] lg:text-xl">Starts from</span>
+            <span class="text-white text-xl lg:text-2xl">0.45 USD</span>
+          </span>
+        </div>
+
+        <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
+          <img
+            class="h-12 object-contain lg:h-16 2xl:h-20"
+            src="/assets/logo/bzm-logo.png"
+          />
+        </div>
+
+        <div class=" col-span-2">
+          <h2
+            class="text-center text-4xl font-medium !leading-tight lg:text-7xl"
+          >
+            <span>Background</span>
+            <span class="text-[#92C46A]">Removal</span>
+          </h2>
+        </div>
+
+        <div class=" col-span-1">
+          <img
+            src="./assets/before-after-1.png"
+            class="h-auto w-full object-contain"
+            alt="Before After"
+            draggable="false"
+          />
+        </div>
+        <div class=" col-span-1">
+          <img
+            src="./assets/before-after-2.png"
+            class="h-auto w-full object-contain"
+            alt="Before After"
+            draggable="false"
+          />
         </div>
       </div>
     </section> -->
