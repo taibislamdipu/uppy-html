@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Cursor Icons</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: #f0f0f0;
+        cursor: none;
+      }
+
+      .element {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50vw;
+        height: 100vh;
+        background-color: #3498db;
+      }
+
+      .cursor-icon {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        pointer-events: none; /* Ensure cursor icon doesn't interfere with mouse events on the container */
+        display: none; /* Initially hide the cursor icon */
+      }
+
+      .left-icon {
+        background-image: url("left-icon.png");
+      }
+
+      .right-icon {
+        background-image: url("right-icon.png");
+      }
+
+      /* Set the custom cursor images */
+      .container.left-cursor {
+        cursor:
+          url("./assets/icon/left.png") 12 12,
+          auto;
+      }
+
+      .container.right-cursor {
+        cursor:
+          url("./assets/icon/right.png") 12 12,
+          auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="element" id="element"></div>
+      <div class="cursor-icon left-icon" id="leftIcon"></div>
+      <div class="cursor-icon right-icon" id="rightIcon"></div>
+    </div>
+
+    <script>
+      function updateCursorIcon(element, container, mouseX) {
+        var elementRect = element.getBoundingClientRect();
+        var elementWidth = elementRect.width;
+        var elementCenterX = elementRect.left + elementWidth / 2;
+
+        if (mouseX <= elementCenterX) {
+          container.classList.remove("right-cursor");
+          container.classList.add("left-cursor");
+        } else {
+          container.classList.remove("left-cursor");
+          container.classList.add("right-cursor");
+        }
+      }
+
+      var container = document.getElementById("container");
+      var element = document.getElementById("element");
+
+      container.addEventListener("mousemove", function (e) {
+        var mouseX = e.clientX;
+
+        updateCursorIcon(element, container, mouseX);
+      });
+
+      container.addEventListener("mouseleave", function () {
+        // Reset cursor when mouse leaves the container
+        container.classList.remove("left-cursor", "right-cursor");
+      });
+    </script>
+  </body>
+</html>
