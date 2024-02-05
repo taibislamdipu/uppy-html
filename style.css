@@ -37,6 +37,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
   /* padding: 48px 64px !important; */
 }
 
@@ -47,21 +48,20 @@ body {
   object-fit: contain;
 } */
 
-.swiper-button-next,
+/* .swiper-button-next,
 .swiper-button-prev {
   opacity: 1;
-  /* border: 1px solid red; */
   padding: 30px;
   background-color: rgba(252, 250, 250, 0.5);
   border-radius: 50%;
   --swiper-navigation-size: 24px;
   transition:
     background-color 0.3s ease,
-    transform 0.3s ease; /* Added transition for background color and transform */
+    transform 0.3s ease;
   --swiper-navigation-color: white !important;
   font-weight: bold;
-  transform-origin: center; /* Set transform origin to the center */
-  transform: scale(0.9); /* Initial scale */
+  transform-origin: center;
+  transform: scale(0.9);
 }
 
 .swiper-button-prev:hover,
@@ -69,8 +69,8 @@ body {
   opacity: 1;
   padding: 30px;
   background-color: #b8b8b8;
-  transform: scale(1.1); /* Scale up on hover */
-}
+  transform: scale(1.1);
+} */
 
 .swiper-pagination-bullet-active {
   background: #92c46a !important;
