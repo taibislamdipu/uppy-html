@@ -3,18 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
     <link
       rel="shortcut icon"
       href="./assets/icon/favicon.png"
       type="image/x-icon"
-    />
-
-    <!-- Google Raleway Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
-      rel="stylesheet"
     />
 
     <!-- Tailwind CSS CDN -->
@@ -23,19 +17,22 @@
     <!-- custom style -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Swiper CDN -->
+    <title>Slider + Form | BZM Graphics</title>
+
+    <!-- Add Swiper styles -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-
-    <title>Form Page</title>
   </head>
-  <body>
+
+  <body
+    class="bg-[#fff] bg-[url('./assets/bg.png')] bg-cover bg-no-repeat px-4"
+  >
     <!-- hero section -->
-    <section class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image.png')]">
+    <section id="div1">
       <div
-        class="gap- container mx-auto grid max-h-[1080px] max-w-7xl grid-cols-1 place-content-center gap-5 p-4 lg:h-screen lg:grid-cols-2 lg:p-10"
+        class="container mx-auto grid max-h-[1080px] max-w-7xl grid-cols-1 place-content-center gap-5 p-4 lg:h-screen lg:grid-cols-2 lg:p-10"
       >
         <!-- Form Head -->
         <div
@@ -52,11 +49,17 @@
           </div>
           <div class="flex max-w-sm flex-col items-end gap-3">
             <div>
-              <img
-                class="class h-16 object-contain 2xl:h-20"
-                src="./assets/logo/bzm-logo.png"
-                alt="BZM Logo"
-              />
+              <a
+                href="https://www.bzmgraphics.com"
+                target="_blank"
+                rel="nofollow noopener"
+              >
+                <img
+                  class="class h-14 object-contain"
+                  src="./assets/logo/bzm-logo.png"
+                  alt="BZM Logo"
+                />
+              </a>
             </div>
             <p class="hidden max-w-lg text-right lg:block">
               Lorem ipsum dolor sit amet, consectetur
@@ -67,7 +70,7 @@
         <!-- User Info -->
         <div class="col-span-1">
           <form
-            class="w-full rounded border border-[#92C46A] bg-white p-5 shadow-lg"
+            class="w-full rounded-md border border-[#92C46A] bg-white p-5 shadow-lg"
           >
             <div class="space-y-4">
               <div class="grid-cols-2 gap-4 max-md:space-y-4 md:grid">
@@ -105,7 +108,7 @@
                     value=""
                     required
                   />
-                  <span style="color: #ff0000; font-style: italic"
+                  <span class="italic text-[#ff0000]"
                     >Please complete this required field.</span
                   >
                 </div>
@@ -148,7 +151,7 @@
                   value=""
                   required
                 ></textarea>
-                <span style="color: #ff0000; font-style: italic"
+                <span class="italic text-[#ff0000]"
                   >Please complete this required field.</span
                 >
               </div>
@@ -160,7 +163,7 @@
             <div class="mb-4 mt-8">
               <button
                 type="submit"
-                class="w-full rounded bg-[#979EAB] px-4 py-3 font-medium text-white transition-all hover:opacity-80"
+                class="w-full rounded-md bg-[#979EAB] px-4 py-3 font-medium text-white transition-all hover:opacity-80"
                 disabled=""
               >
                 Submit
@@ -171,174 +174,64 @@
 
         <!-- File Upload Section -->
         <div class="col-span-1 bg-[#F4F4F4]">File Upload Section</div>
+
+        <div
+          class="absolute bottom-3 right-3 z-10 flex justify-center rounded-md bg-[#000] transition hover:bg-[#000]/80"
+        >
+          <a href="#div2">
+            <img
+              class="h-16 w-16 rounded-md"
+              src="./assets/icon/down.gif"
+              alt=""
+            />
+          </a>
+        </div>
       </div>
     </section>
 
     <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="tb">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div
-              class="bg-[#F4F4F4] bg-cover px-4 lg:bg-[url('./assets/bg-image-3.png')] lg:px-0"
-            >
-              <div class="mx-auto max-w-[3000px]">
-                <div
-                  class="flex flex-col-reverse gap-4 py-4 lg:h-screen lg:flex-row lg:gap-0 lg:py-0 lg:pt-20"
-                >
-                  <div class="flex-1 px-10 lg:pt-10">
-                    <div class="relative min-h-[350px] min-w-full lg:h-full">
-                      <img
-                        class="h-full w-full object-contain"
-                        src="./assets/hero-image-1.png"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="z-10 flex flex-1 flex-col justify-center text-center lg:p-20 lg:text-right"
-                  >
-                    <h2
-                      class="whitespace-nowrap text-4xl font-bold !leading-normal lg:text-7xl 2xl:text-8xl"
-                    >
-                      <span>Service</span>
-                      <span class="text-[#92c46a]">Portfolio</span>
-                    </h2>
-                    <p class="text-3xl font-light leading-normal lg:text-7xl">
-                      Before & After
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div
-              class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
-            >
-              <div
-                class="mx-auto flex max-w-screen-2xl flex-col-reverse items-center justify-between space-y-5 p-4 lg:h-screen lg:max-h-[1080px] lg:flex-row lg:gap-20 lg:p-10"
-              >
-                <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
-                  <img
-                    class="class h-12 object-contain lg:h-16 2xl:h-20"
-                    src="/assets/logo/bzm-logo.png"
-                  />
-                </div>
-
-                <div
-                  class="right-10 top-10 z-20 flex justify-center lg:absolute lg:justify-end"
-                >
-                  <span
-                    class="my-5 flex h-[130px] w-[130px] flex-col items-center justify-center rounded-full bg-[#292D32] font-semibold text-white lg:my-0 lg:h-[160px] lg:w-[160px]"
-                  >
-                    <span class="text-lg text-[#92c46a] lg:text-xl"
-                      >Starts from</span
-                    >
-                    <span class="text-xl text-white lg:text-2xl">0.45 USD</span>
-                  </span>
-                </div>
-
-                <div class="flex-1">
-                  <img
-                    src="./assets/example-1.png"
-                    class="h-full w-full object-contain"
-                    alt="example"
-                  />
-                </div>
-
-                <div class="flex-1 space-y-5">
-                  <h2
-                    class="flex flex-col text-center text-4xl font-medium !leading-tight lg:text-start lg:text-7xl"
-                  >
-                    <span>Background</span>
-                    <span class="text-[#92c46a]">Removal</span>
-                  </h2>
-                  <p class="max-w-md text-base">
-                    Background Removal Service with top-notch quality every
-                    time. Cutouts, knock-outs, etching, silhouettes, etc.
-                    Whatever you call it, removing the background from a product
-                    photo puts all the attention on the selling product.
-                  </p>
-
-                  <ul class="list-disc space-y-1 pl-6 text-base">
-                    <li>White, Transparent, or Custom Background Color</li>
-                    <li>JPG, PNG, PSD, TIFF format</li>
-                    <li>Best for marketplaces</li>
-                    <li>Focus the product on your eCommerce site</li>
-                    <li>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Maiores nemo ut deserunt quis optio quos.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div
-              class="relative bg-[#F4F4F4] bg-[url('./assets/bg-image-2.png')] bg-cover"
-            >
-              <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
+    <section id="div2" class="relative h-screen bg-[#fff4e5]/20">
+      <div class="grid h-full place-content-center">
+        <div class="swiper-container overflow-hidden" id="swiperContainer">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div>
                 <img
-                  class="h-12 object-contain lg:h-16 2xl:h-20"
-                  src="/assets/logo/bzm-logo.png"
+                  class="h-full w-full object-contain lg:h-[700px]"
+                  src="./assets/1.png"
+                  alt=""
                 />
               </div>
-
-              <main class="h-screen px-4 py-10">
-                <h2
-                  class="h-1/6 text-center text-4xl font-medium leading-none lg:text-7xl"
-                >
-                  <span>Background</span>
-                  <span class="text-[#92c46a]">Removal</span>
-                </h2>
-                <div
-                  class="h-4/5 justify-between space-y-5 lg:flex lg:space-y-0"
-                >
-                  <div class="z-10 flex-1">
-                    <img
-                      src="./assets/before-after-1.png"
-                      class="h-full w-full object-contain"
-                      alt=""
-                    />
-                  </div>
-                  <div class="z-10 flex-1">
-                    <img
-                      src="./assets/before-after-2.png"
-                      class="h-full w-full object-contain"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </main>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <img
+                  class="h-full w-full object-contain lg:h-[700px]"
+                  src="./assets/slide-2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <img
+                  class="h-full w-full object-contain lg:h-[700px]"
+                  src="./assets/slide-3.png"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="swiper-button-next tb"></div>
-        <div class="swiper-button-prev tb"></div>
         <div class="swiper-pagination"></div>
+        <div class="cursor-icon left-icon" id="leftIcon"></div>
+        <div class="cursor-icon right-icon" id="rightIcon"></div>
       </div>
+    </section>
 
-      <!-- Swiper -->
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide h-screen">Lorem ipsum dolor sit amet.</div>
-          <div class="swiper-slide h-screen">Lorem ipsum dolor sit amet.</div>
-          <div class="swiper-slide h-screen">Lorem ipsum dolor sit amet.</div>
-        </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
+    <script src="./index.js"></script>
   </body>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script src="./index.js"></script>
 </html>
