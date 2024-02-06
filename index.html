@@ -52,9 +52,9 @@
     </style>
   </head>
 
-  <body class="bg-[#F4F4F4] bg-[url('./assets/bg.png')] bg-auto px-4">
+  <body class="bg-[#fff] bg-[url('./assets/bg.png')] bg-auto px-4">
     <!-- hero section -->
-    <section>
+    <section id="div1">
       <div
         class="gap- container mx-auto grid max-h-[1080px] max-w-7xl grid-cols-1 place-content-center gap-5 p-4 lg:h-screen lg:grid-cols-2 lg:p-10"
       >
@@ -204,7 +204,7 @@
     </section>
 
     <!-- Swiper -->
-    <div class="relative h-screen">
+    <section id="div2" class="relative h-screen bg-[#fff4e5]/20">
       <div class="grid h-full place-content-center">
         <div class="swiper-container overflow-hidden" id="swiperContainer">
           <div class="swiper-wrapper">
@@ -241,19 +241,13 @@
         <div class="cursor-icon left-icon" id="leftIcon"></div>
         <div class="cursor-icon right-icon" id="rightIcon"></div>
       </div>
-    </div>
+    </section>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script>
-      var swiper = new Swiper("#swiperContainer", {
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        // Add other Swiper configurations as needed
-      });
+    <script src="./index.js"></script>
 
+    <script>
       function updateCursorIcon(swiper, container, mouseX) {
         var containerWidth = container.offsetWidth;
         var mouseXPercentage = (mouseX / containerWidth) * 100;
@@ -299,6 +293,25 @@
         document.getElementById("leftIcon").style.display = "none";
         document.getElementById("rightIcon").style.display = "none";
       });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const div1 = document.getElementById("div1");
+        const div2 = document.getElementById("div2");
+
+        div1.addEventListener("wheel", function (event) {
+          if (event.deltaY > 0) {
+            // Scrolling down
+            smoothScrollTo(div2);
+          }
+        });
+      });
+
+      function smoothScrollTo(element) {
+        window.scrollTo({
+          top: element.offsetTop,
+          behavior: "smooth",
+        });
+      }
     </script>
   </body>
 </html>
