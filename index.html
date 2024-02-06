@@ -4,59 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/icon/favicon.png"
+      type="image/x-icon"
+    />
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- custom style -->
     <link rel="stylesheet" href="style.css" />
 
-    <title>Custom Cursor with Swiper Slider</title>
+    <title>Slider + Form | BZM Graphics</title>
+
     <!-- Add Swiper styles -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <style>
-      body {
-        /* overflow: hidden; */
-        overflow-x: hidden;
-      }
-
-      .cursor-icon {
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        pointer-events: none;
-        display: none;
-      }
-
-      .left-icon {
-        background-image: url("left-icon.png");
-      }
-
-      .right-icon {
-        background-image: url("right-icon.png");
-      }
-
-      .swiper-container.left-cursor {
-        cursor:
-          url("./assets/icon/arrow-left.svg") 12 12,
-          auto;
-      }
-
-      .swiper-container.right-cursor {
-        cursor:
-          url("./assets/icon/arrow-right.svg") 12 12,
-          auto;
-      }
-    </style>
   </head>
 
-  <body class="bg-[#fff] bg-[url('./assets/bg.png')] bg-auto px-4">
+  <body
+    class="bg-[#fff] bg-[url('./assets/bg.png')] bg-cover bg-no-repeat px-4"
+  >
     <!-- hero section -->
     <section id="div1">
       <div
-        class="gap- container mx-auto grid max-h-[1080px] max-w-7xl grid-cols-1 place-content-center gap-5 p-4 lg:h-screen lg:grid-cols-2 lg:p-10"
+        class="container mx-auto grid max-h-[1080px] max-w-7xl grid-cols-1 place-content-center gap-5 p-4 lg:h-screen lg:grid-cols-2 lg:p-10"
       >
         <!-- Form Head -->
         <div
@@ -73,11 +49,17 @@
           </div>
           <div class="flex max-w-sm flex-col items-end gap-3">
             <div>
-              <img
-                class="class h-16 object-contain 2xl:h-20"
-                src="./assets/logo/bzm-logo.png"
-                alt="BZM Logo"
-              />
+              <a
+                href="https://www.bzmgraphics.com"
+                target="_blank"
+                rel="nofollow noopener"
+              >
+                <img
+                  class="class h-14 object-contain"
+                  src="./assets/logo/bzm-logo.png"
+                  alt="BZM Logo"
+                />
+              </a>
             </div>
             <p class="hidden max-w-lg text-right lg:block">
               Lorem ipsum dolor sit amet, consectetur
@@ -88,7 +70,7 @@
         <!-- User Info -->
         <div class="col-span-1">
           <form
-            class="w-full rounded border border-[#92C46A] bg-white p-5 shadow-lg"
+            class="w-full rounded-md border border-[#92C46A] bg-white p-5 shadow-lg"
           >
             <div class="space-y-4">
               <div class="grid-cols-2 gap-4 max-md:space-y-4 md:grid">
@@ -126,7 +108,7 @@
                     value=""
                     required
                   />
-                  <span style="color: #ff0000; font-style: italic"
+                  <span class="italic text-[#ff0000]"
                     >Please complete this required field.</span
                   >
                 </div>
@@ -169,7 +151,7 @@
                   value=""
                   required
                 ></textarea>
-                <span style="color: #ff0000; font-style: italic"
+                <span class="italic text-[#ff0000]"
                   >Please complete this required field.</span
                 >
               </div>
@@ -181,7 +163,7 @@
             <div class="mb-4 mt-8">
               <button
                 type="submit"
-                class="w-full rounded bg-[#979EAB] px-4 py-3 font-medium text-white transition-all hover:opacity-80"
+                class="w-full rounded-md bg-[#979EAB] px-4 py-3 font-medium text-white transition-all hover:opacity-80"
                 disabled=""
               >
                 Submit
@@ -193,12 +175,16 @@
         <!-- File Upload Section -->
         <div class="col-span-1 bg-[#F4F4F4]">File Upload Section</div>
 
-        <div class="absolute bottom-2 right-0 flex justify-center">
-          <img
-            class="h-16 w-16 bg-[#363633]"
-            src="./assets/icon/down.gif"
-            alt=""
-          />
+        <div
+          class="absolute bottom-3 right-3 z-10 flex justify-center rounded-md bg-[#000] transition hover:bg-[#000]/80"
+        >
+          <a href="#div2">
+            <img
+              class="h-16 w-16 rounded-md"
+              src="./assets/icon/down.gif"
+              alt=""
+            />
+          </a>
         </div>
       </div>
     </section>
@@ -242,76 +228,10 @@
         <div class="cursor-icon right-icon" id="rightIcon"></div>
       </div>
     </section>
+
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="./index.js"></script>
-
-    <script>
-      function updateCursorIcon(swiper, container, mouseX) {
-        var containerWidth = container.offsetWidth;
-        var mouseXPercentage = (mouseX / containerWidth) * 100;
-
-        if (mouseXPercentage <= 30) {
-          container.classList.remove("right-cursor");
-          container.classList.add("left-cursor");
-          document.getElementById("leftIcon").style.display = "block";
-          document.getElementById("rightIcon").style.display = "none";
-        } else if (mouseXPercentage >= 70) {
-          container.classList.remove("left-cursor");
-          container.classList.add("right-cursor");
-          document.getElementById("leftIcon").style.display = "none";
-          document.getElementById("rightIcon").style.display = "block";
-        } else {
-          container.classList.remove("left-cursor", "right-cursor");
-          document.getElementById("leftIcon").style.display = "none";
-          document.getElementById("rightIcon").style.display = "none";
-        }
-      }
-
-      var container = document.getElementById("swiperContainer");
-
-      container.addEventListener("mousemove", function (e) {
-        var mouseX = e.clientX;
-
-        updateCursorIcon(swiper, container, mouseX);
-      });
-
-      container.addEventListener("click", function (e) {
-        // Change slide on click
-        var mouseXPercentage = (e.clientX / container.offsetWidth) * 100;
-        if (mouseXPercentage <= 30) {
-          swiper.slidePrev();
-        } else if (mouseXPercentage >= 70) {
-          swiper.slideNext();
-        }
-      });
-
-      container.addEventListener("mouseleave", function () {
-        // Reset cursor when mouse leaves the container
-        container.classList.remove("left-cursor", "right-cursor");
-        document.getElementById("leftIcon").style.display = "none";
-        document.getElementById("rightIcon").style.display = "none";
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const div1 = document.getElementById("div1");
-        const div2 = document.getElementById("div2");
-
-        div1.addEventListener("wheel", function (event) {
-          if (event.deltaY > 0) {
-            // Scrolling down
-            smoothScrollTo(div2);
-          }
-        });
-      });
-
-      function smoothScrollTo(element) {
-        window.scrollTo({
-          top: element.offsetTop,
-          behavior: "smooth",
-        });
-      }
-    </script>
   </body>
 </html>
