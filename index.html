@@ -3,19 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="./assets/icon/favicon.png"
-      type="image/x-icon"
-    />
-
-    <!-- Google Raleway Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,17 +10,51 @@
     <!-- custom style -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Swiper CDN -->
+    <title>Custom Cursor with Swiper Slider</title>
+    <!-- Add Swiper styles -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <style>
+      body {
+        /* overflow: hidden; */
+        overflow-x: hidden;
+      }
 
-    <title>Form Page</title>
+      .cursor-icon {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        pointer-events: none;
+        display: none;
+      }
+
+      .left-icon {
+        background-image: url("left-icon.png");
+      }
+
+      .right-icon {
+        background-image: url("right-icon.png");
+      }
+
+      .swiper-container.left-cursor {
+        cursor:
+          url("./assets/icon/arrow-left.svg") 12 12,
+          auto;
+      }
+
+      .swiper-container.right-cursor {
+        cursor:
+          url("./assets/icon/arrow-right.svg") 12 12,
+          auto;
+      }
+    </style>
   </head>
-  <body>
+
+  <body class="bg-[#F4F4F4] bg-[url('./assets/bg.png')] bg-auto px-4">
     <!-- hero section -->
-    <section class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image.png')]">
+    <section>
       <div
         class="gap- container mx-auto grid max-h-[1080px] max-w-7xl grid-cols-1 place-content-center gap-5 p-4 lg:h-screen lg:grid-cols-2 lg:p-10"
       >
@@ -171,174 +192,113 @@
 
         <!-- File Upload Section -->
         <div class="col-span-1 bg-[#F4F4F4]">File Upload Section</div>
+
+        <div class="absolute bottom-2 right-0 flex justify-center">
+          <img
+            class="h-16 w-16 bg-[#363633]"
+            src="./assets/icon/down.gif"
+            alt=""
+          />
+        </div>
       </div>
     </section>
 
     <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="tb">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div
-              class="bg-[#F4F4F4] bg-cover px-4 lg:bg-[url('./assets/bg-image-3.png')] lg:px-0"
-            >
-              <div class="mx-auto max-w-[3000px]">
-                <div
-                  class="flex flex-col-reverse gap-4 py-4 lg:h-screen lg:flex-row lg:gap-0 lg:py-0 lg:pt-20"
-                >
-                  <div class="flex-1 px-10 lg:pt-10">
-                    <div class="relative min-h-[350px] min-w-full lg:h-full">
-                      <img
-                        class="h-full w-full object-contain"
-                        src="./assets/hero-image-1.png"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    class="z-10 flex flex-1 flex-col justify-center text-center lg:p-20 lg:text-right"
-                  >
-                    <h2
-                      class="whitespace-nowrap text-4xl font-bold !leading-normal lg:text-7xl 2xl:text-8xl"
-                    >
-                      <span>Service</span>
-                      <span class="text-[#92c46a]">Portfolio</span>
-                    </h2>
-                    <p class="text-3xl font-light leading-normal lg:text-7xl">
-                      Before & After
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div
-              class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
-            >
-              <div
-                class="mx-auto flex max-w-screen-2xl flex-col-reverse items-center justify-between space-y-5 p-4 lg:h-screen lg:max-h-[1080px] lg:flex-row lg:gap-20 lg:p-10"
-              >
-                <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
-                  <img
-                    class="class h-12 object-contain lg:h-16 2xl:h-20"
-                    src="/assets/logo/bzm-logo.png"
-                  />
-                </div>
-
-                <div
-                  class="right-10 top-10 z-20 flex justify-center lg:absolute lg:justify-end"
-                >
-                  <span
-                    class="my-5 flex h-[130px] w-[130px] flex-col items-center justify-center rounded-full bg-[#292D32] font-semibold text-white lg:my-0 lg:h-[160px] lg:w-[160px]"
-                  >
-                    <span class="text-lg text-[#92c46a] lg:text-xl"
-                      >Starts from</span
-                    >
-                    <span class="text-xl text-white lg:text-2xl">0.45 USD</span>
-                  </span>
-                </div>
-
-                <div class="flex-1">
-                  <img
-                    src="./assets/example-1.png"
-                    class="h-full w-full object-contain"
-                    alt="example"
-                  />
-                </div>
-
-                <div class="flex-1 space-y-5">
-                  <h2
-                    class="flex flex-col text-center text-4xl font-medium !leading-tight lg:text-start lg:text-7xl"
-                  >
-                    <span>Background</span>
-                    <span class="text-[#92c46a]">Removal</span>
-                  </h2>
-                  <p class="max-w-md text-base">
-                    Background Removal Service with top-notch quality every
-                    time. Cutouts, knock-outs, etching, silhouettes, etc.
-                    Whatever you call it, removing the background from a product
-                    photo puts all the attention on the selling product.
-                  </p>
-
-                  <ul class="list-disc space-y-1 pl-6 text-base">
-                    <li>White, Transparent, or Custom Background Color</li>
-                    <li>JPG, PNG, PSD, TIFF format</li>
-                    <li>Best for marketplaces</li>
-                    <li>Focus the product on your eCommerce site</li>
-                    <li>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Maiores nemo ut deserunt quis optio quos.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <div
-              class="relative bg-[#F4F4F4] bg-[url('./assets/bg-image-2.png')] bg-cover"
-            >
-              <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
+    <div class="relative h-screen">
+      <div class="grid h-full place-content-center">
+        <div class="swiper-container overflow-hidden" id="swiperContainer">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div>
                 <img
-                  class="h-12 object-contain lg:h-16 2xl:h-20"
-                  src="/assets/logo/bzm-logo.png"
+                  class="h-full w-full object-contain lg:h-[700px]"
+                  src="./assets/1.png"
+                  alt=""
                 />
               </div>
-
-              <main class="h-screen px-4 py-10">
-                <h2
-                  class="h-1/6 text-center text-4xl font-medium leading-none lg:text-7xl"
-                >
-                  <span>Background</span>
-                  <span class="text-[#92c46a]">Removal</span>
-                </h2>
-                <div
-                  class="h-4/5 justify-between space-y-5 lg:flex lg:space-y-0"
-                >
-                  <div class="z-10 flex-1">
-                    <img
-                      src="./assets/before-after-1.png"
-                      class="h-full w-full object-contain"
-                      alt=""
-                    />
-                  </div>
-                  <div class="z-10 flex-1">
-                    <img
-                      src="./assets/before-after-2.png"
-                      class="h-full w-full object-contain"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </main>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <img
+                  class="h-full w-full object-contain lg:h-[700px]"
+                  src="./assets/slide-2.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <img
+                  class="h-full w-full object-contain lg:h-[700px]"
+                  src="./assets/slide-3.png"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="swiper-button-next tb"></div>
-        <div class="swiper-button-prev tb"></div>
         <div class="swiper-pagination"></div>
-      </div>
-
-      <!-- Swiper -->
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide h-screen">Lorem ipsum dolor sit amet.</div>
-          <div class="swiper-slide h-screen">Lorem ipsum dolor sit amet.</div>
-          <div class="swiper-slide h-screen">Lorem ipsum dolor sit amet.</div>
-        </div>
-
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
+        <div class="cursor-icon left-icon" id="leftIcon"></div>
+        <div class="cursor-icon right-icon" id="rightIcon"></div>
       </div>
     </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper("#swiperContainer", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // Add other Swiper configurations as needed
+      });
+
+      function updateCursorIcon(swiper, container, mouseX) {
+        var containerWidth = container.offsetWidth;
+        var mouseXPercentage = (mouseX / containerWidth) * 100;
+
+        if (mouseXPercentage <= 30) {
+          container.classList.remove("right-cursor");
+          container.classList.add("left-cursor");
+          document.getElementById("leftIcon").style.display = "block";
+          document.getElementById("rightIcon").style.display = "none";
+        } else if (mouseXPercentage >= 70) {
+          container.classList.remove("left-cursor");
+          container.classList.add("right-cursor");
+          document.getElementById("leftIcon").style.display = "none";
+          document.getElementById("rightIcon").style.display = "block";
+        } else {
+          container.classList.remove("left-cursor", "right-cursor");
+          document.getElementById("leftIcon").style.display = "none";
+          document.getElementById("rightIcon").style.display = "none";
+        }
+      }
+
+      var container = document.getElementById("swiperContainer");
+
+      container.addEventListener("mousemove", function (e) {
+        var mouseX = e.clientX;
+
+        updateCursorIcon(swiper, container, mouseX);
+      });
+
+      container.addEventListener("click", function (e) {
+        // Change slide on click
+        var mouseXPercentage = (e.clientX / container.offsetWidth) * 100;
+        if (mouseXPercentage <= 30) {
+          swiper.slidePrev();
+        } else if (mouseXPercentage >= 70) {
+          swiper.slideNext();
+        }
+      });
+
+      container.addEventListener("mouseleave", function () {
+        // Reset cursor when mouse leaves the container
+        container.classList.remove("left-cursor", "right-cursor");
+        document.getElementById("leftIcon").style.display = "none";
+        document.getElementById("rightIcon").style.display = "none";
+      });
+    </script>
   </body>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script src="./index.js"></script>
 </html>

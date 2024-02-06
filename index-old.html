@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/icon/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- Google Raleway Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Swiper CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Form Page</title>
+  </head>
+  <body>
+    <!-- hero section -->
+    <section class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image.png')]">
+      <div
+        class="gap- container mx-auto grid max-h-[1080px] max-w-7xl grid-cols-1 place-content-center gap-5 p-4 lg:h-screen lg:grid-cols-2 lg:p-10"
+      >
+        <!-- Form Head -->
+        <div
+          class="col-span-1 flex justify-between lg:col-span-2 lg:items-center"
+        >
+          <div class="space-y-3">
+            <h1 class="text-4xl leading-none text-[#92c46a]">
+              Take Free Trail
+            </h1>
+            <p class="max-w-lg text-gray-700">
+              Choosing a professional photo editing company can ensure quality,
+              quick turnarounds, and exceptional results.
+            </p>
+          </div>
+          <div class="flex max-w-sm flex-col items-end gap-3">
+            <div>
+              <img
+                class="class h-16 object-contain 2xl:h-20"
+                src="./assets/logo/bzm-logo.png"
+                alt="BZM Logo"
+              />
+            </div>
+            <p class="hidden max-w-lg text-right lg:block">
+              Lorem ipsum dolor sit amet, consectetur
+            </p>
+          </div>
+        </div>
+
+        <!-- User Info -->
+        <div class="col-span-1">
+          <form
+            class="w-full rounded border border-[#92C46A] bg-white p-5 shadow-lg"
+          >
+            <div class="space-y-4">
+              <div class="grid-cols-2 gap-4 max-md:space-y-4 md:grid">
+                <div class="space-y-1">
+                  <label class="flex items-center gap-1 font-medium" for="name"
+                    >Full Name
+                    <span class="text-2xl text-[#ff0000]">*</span></label
+                  >
+                  <input
+                    class="block w-full rounded-md border border-[#ff0000] px-3 py-2.5 transition focus:outline-none focus:ring-1"
+                    type="text"
+                    name="name"
+                    placeholder="John Smith"
+                    value=""
+                    required
+                  />
+                  <span class="italic text-[#ff0000]"
+                    >Please complete this required field.</span
+                  >
+                </div>
+
+                <div class="space-y-1">
+                  <label
+                    class="flex items-center gap-1 font-medium"
+                    for="email"
+                  >
+                    Email
+                    <span class="text-2xl text-[#ff0000]">*</span>
+                  </label>
+                  <input
+                    class="block w-full rounded-md border px-3 py-2.5 transition focus:outline-none focus:ring-1 focus:ring-[#92C46A]"
+                    type="email"
+                    name="email"
+                    placeholder="john@example.com"
+                    value=""
+                    required
+                  />
+                  <span style="color: #ff0000; font-style: italic"
+                    >Please complete this required field.</span
+                  >
+                </div>
+
+                <div class="space-y-1">
+                  <label class="font-medium" for="company">Company Name</label>
+                  <input
+                    class="block w-full rounded-md border px-3 py-2.5 transition focus:outline-none focus:ring-1 focus:ring-[#92C46A]"
+                    type="text"
+                    name="company"
+                    placeholder="BZM Graphics"
+                    value=""
+                  />
+                </div>
+
+                <div class="space-y-1">
+                  <label class="font-medium" for="website">Website</label>
+                  <input
+                    class="block w-full rounded-md border px-3 py-2.5 transition focus:outline-none focus:ring-1 focus:ring-[#92C46A]"
+                    type="text"
+                    name="website"
+                    placeholder="johnsmith.com"
+                    value=""
+                  />
+                </div>
+              </div>
+
+              <div class="space-y-1">
+                <label
+                  class="flex items-center gap-1 font-medium"
+                  for="instruction"
+                  >Instruction
+                  <span class="text-2xl text-[#ff0000]">*</span></label
+                >
+                <textarea
+                  class="block w-full rounded-md border px-3 py-2.5 transition focus:outline-none focus:ring-1 focus:ring-[#92C46A]"
+                  type="text"
+                  name="instruction"
+                  placeholder="Remove background & retouch service."
+                  value=""
+                  required
+                ></textarea>
+                <span style="color: #ff0000; font-style: italic"
+                  >Please complete this required field.</span
+                >
+              </div>
+
+              <!-- Cloudflare area -->
+              <div>Cloudflare area</div>
+            </div>
+
+            <div class="mb-4 mt-8">
+              <button
+                type="submit"
+                class="w-full rounded bg-[#979EAB] px-4 py-3 font-medium text-white transition-all hover:opacity-80"
+                disabled=""
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- File Upload Section -->
+        <div class="col-span-1 bg-[#F4F4F4]">File Upload Section</div>
+      </div>
+    </section>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="tb">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="bg-[#F4F4F4] bg-cover px-4 lg:bg-[url('./assets/bg-image-3.png')] lg:px-0"
+            >
+              <div class="mx-auto max-w-[3000px]">
+                <div
+                  class="flex flex-col-reverse gap-4 py-4 lg:h-screen lg:flex-row lg:gap-0 lg:py-0 lg:pt-20"
+                >
+                  <div class="flex-1 px-10 lg:pt-10">
+                    <div class="relative min-h-[350px] min-w-full lg:h-full">
+                      <img
+                        class="h-full w-full object-contain"
+                        src="./assets/hero-image-1.png"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="z-10 flex flex-1 flex-col justify-center text-center lg:p-20 lg:text-right"
+                  >
+                    <h2
+                      class="whitespace-nowrap text-4xl font-bold !leading-normal lg:text-7xl 2xl:text-8xl"
+                    >
+                      <span>Service</span>
+                      <span class="text-[#92c46a]">Portfolio</span>
+                    </h2>
+                    <p class="text-3xl font-light leading-normal lg:text-7xl">
+                      Before & After
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div
+              class="bg-[#F4F4F4] bg-cover lg:bg-[url('./assets/bg-image-2.png')]"
+            >
+              <div
+                class="mx-auto flex max-w-screen-2xl flex-col-reverse items-center justify-between space-y-5 p-4 lg:h-screen lg:max-h-[1080px] lg:flex-row lg:gap-20 lg:p-10"
+              >
+                <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
+                  <img
+                    class="class h-12 object-contain lg:h-16 2xl:h-20"
+                    src="/assets/logo/bzm-logo.png"
+                  />
+                </div>
+
+                <div
+                  class="right-10 top-10 z-20 flex justify-center lg:absolute lg:justify-end"
+                >
+                  <span
+                    class="my-5 flex h-[130px] w-[130px] flex-col items-center justify-center rounded-full bg-[#292D32] font-semibold text-white lg:my-0 lg:h-[160px] lg:w-[160px]"
+                  >
+                    <span class="text-lg text-[#92c46a] lg:text-xl"
+                      >Starts from</span
+                    >
+                    <span class="text-xl text-white lg:text-2xl">0.45 USD</span>
+                  </span>
+                </div>
+
+                <div class="flex-1">
+                  <img
+                    src="./assets/example-1.png"
+                    class="h-full w-full object-contain"
+                    alt="example"
+                  />
+                </div>
+
+                <div class="flex-1 space-y-5">
+                  <h2
+                    class="flex flex-col text-center text-4xl font-medium !leading-tight lg:text-start lg:text-7xl"
+                  >
+                    <span>Background</span>
+                    <span class="text-[#92c46a]">Removal</span>
+                  </h2>
+                  <p class="max-w-md text-base">
+                    Background Removal Service with top-notch quality every
+                    time. Cutouts, knock-outs, etching, silhouettes, etc.
+                    Whatever you call it, removing the background from a product
+                    photo puts all the attention on the selling product.
+                  </p>
+
+                  <ul class="list-disc space-y-1 pl-6 text-base">
+                    <li>White, Transparent, or Custom Background Color</li>
+                    <li>JPG, PNG, PSD, TIFF format</li>
+                    <li>Best for marketplaces</li>
+                    <li>Focus the product on your eCommerce site</li>
+                    <li>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Maiores nemo ut deserunt quis optio quos.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div
+              class="relative bg-[#F4F4F4] bg-[url('./assets/bg-image-2.png')] bg-cover"
+            >
+              <div class="absolute bottom-4 left-[3%] z-20 lg:bottom-[5%]">
+                <img
+                  class="h-12 object-contain lg:h-16 2xl:h-20"
+                  src="/assets/logo/bzm-logo.png"
+                />
+              </div>
+
+              <main class="h-screen px-4 py-10">
+                <h2
+                  class="h-1/6 text-center text-4xl font-medium leading-none lg:text-7xl"
+                >
+                  <span>Background</span>
+                  <span class="text-[#92c46a]">Removal</span>
+                </h2>
+                <div
+                  class="h-4/5 justify-between space-y-5 lg:flex lg:space-y-0"
+                >
+                  <div class="z-10 flex-1">
+                    <img
+                      src="./assets/before-after-1.png"
+                      class="h-full w-full object-contain"
+                      alt=""
+                    />
+                  </div>
+                  <div class="z-10 flex-1">
+                    <img
+                      src="./assets/before-after-2.png"
+                      class="h-full w-full object-contain"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next tb"></div>
+        <div class="swiper-button-prev tb"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide h-screen">Lorem ipsum dolor sit amet.</div>
+          <div class="swiper-slide h-screen">Lorem ipsum dolor sit amet.</div>
+          <div class="swiper-slide h-screen">Lorem ipsum dolor sit amet.</div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </body>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="./index.js"></script>
+</html>
