@@ -141,15 +141,18 @@
                   class="flex items-center gap-1 font-medium"
                   for="instruction"
                   >Instruction
-                  <span class="text-2xl text-[#ff0000]">*</span></label
-                >
+                  <span class="text-2xl text-[#ff0000]">*</span>
+                </label>
                 <textarea
-                  class="block w-full rounded-md border px-3 py-2.5 transition focus:outline-none focus:ring-1 focus:ring-[#92C46A]"
+                  class="block max-h-32 w-full resize-none rounded-md border px-3 py-2.5 transition focus:outline-none focus:ring-1 focus:ring-[#92C46A]"
                   type="text"
                   name="instruction"
                   placeholder="Remove background & retouch service."
                   value=""
                   required
+                  rows="4"
+                  cols="50"
+                  maxlength="500"
                 ></textarea>
                 <span class="italic text-[#ff0000]"
                   >Please complete this required field.</span

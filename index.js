@@ -1,23 +1,3 @@
-// var swiper = new Swiper(".mySwiper", {
-//   spaceBetween: 30,
-//   // centeredSlides: true,
-//   // autoplay: {
-//   //   delay: 2500,
-//   //   disableOnInteraction: false,
-//   // },
-//   loop: true,
-
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
-
 var swiper = new Swiper("#swiperContainer", {
   spaceBetween: 30,
   centeredSlides: true,
@@ -84,9 +64,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const div1 = document.getElementById("div1");
   const div2 = document.getElementById("div2");
 
-  div1.addEventListener("wheel", function (event) {
+  window.addEventListener("wheel", function (event) {
     if (event.deltaY > 0) {
+      // Scrolling down
       smoothScrollTo(div2);
+    } else {
+      // Scrolling up
+      smoothScrollTo(div1);
     }
   });
 });
