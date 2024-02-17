@@ -114,6 +114,58 @@
                 </div>
 
                 <div class="space-y-1">
+                  <label
+                    class="flex items-center gap-1 font-medium"
+                    for="imageCount"
+                  >
+                    How many images do you edit per year?
+                    <span class="text-2xl text-[#ff0000]">*</span>
+                  </label>
+                  <select
+                    class="block w-full rounded-md border border-[#ff0000] px-3 py-2.5 transition focus:outline-none focus:ring-1"
+                    name="imageCount"
+                    id="imageCount"
+                    required
+                  >
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Less than 500">Less than 500</option>
+                    <option value="500-1000">500-1000</option>
+                    <option value="1000-2500">1000-2500</option>
+                    <option value="2500-5000">2500-5000</option>
+                    <option value="5000-7500">5000-7500</option>
+                    <option value="7500-10000">7500-10000</option>
+                    <option value="More than 10000">More than 10000</option>
+                  </select>
+                  <span class="italic text-[#ff0000]"
+                    >Please complete this required field.</span
+                  >
+                </div>
+
+                <div class="space-y-1">
+                  <label
+                    class="flex items-center gap-1 font-medium"
+                    for="freqCount"
+                  >
+                    How often do you edit product images?
+                    <span class="text-2xl text-[#ff0000]">*</span>
+                  </label>
+                  <select
+                    class="block w-full rounded-md border border-[#ff0000] px-3 py-2.5 transition focus:outline-none focus:ring-1"
+                    name="freqCount"
+                    id="freqCount"
+                    required
+                  >
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                  </select>
+                  <span class="italic text-[#ff0000]"
+                    >Please complete this required field.</span
+                  >
+                </div>
+
+                <div class="space-y-1">
                   <label class="font-medium" for="company">Company Name</label>
                   <input
                     class="block w-full rounded-md border px-3 py-2.5 transition focus:outline-none focus:ring-1 focus:ring-[#92C46A]"
